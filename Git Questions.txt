@@ -1,0 +1,13 @@
+GIT Questions
+
+What config files for git are there?
+	C:\\ProgramData/Git/config
+	C:\\Program Files\\Git\\mingw64/etc/gitconfig
+	C:/Users/Mason/.gitconfig
+
+Where are the config files located?
+
+what are the distinct uses for each config file?
+
+what options are in each config file?
+Th

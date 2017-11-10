@@ -1,0 +1,93 @@
+Git Cheat Sheet
+
+1. Creating A Git Repository
+	1. From a directory you want to hold the repository, type into the terminal
+	"git init." This will create an empty repository in your current directory
+	contained in the folder /.git/.
+	
+2. Checking The Status of A Repository
+	A.	in the directory containing /.git/, type "git status." This will show
+	the branch, current commit, and any untracked files for the repository.
+	
+3. Adding Files to A Repository
+	A. New files that need to be added to a repository or files already in the
+	repository that need to be updated must first be put into the staging area
+	before being commited.
+	
+	B. To put files in the staging area, type "git add <Filenames>". This will
+	add the selected files into the staging area. Typing "git status" will show
+	which files are in the staging area.
+	
+	C. To finally add/update a file, type "git commit -m <Comment>". Commit adds
+	any new files to the repository, and updates existing files with the newly 
+	commited version. the "-m" option means that the next argument on the command line is 
+	a comment about what changes were made to the repository files.
+	
+	NOTE: you can use wildcards, such as "*.txt," to add multiple similiar files 
+	at once.
+	
+3. Viewing All Commits in A Repository.	
+	A. All commits in a repository can be viewed with "git log."
+	
+4. Pushing A Local Repository(Repo) Onto A Remote Repository
+	A. This exercise is similiar to commiting. First you add,
+	then you push.
+	
+	B. Your Local Repo is added to a remote server with
+	the command "git remote add <remoteName> <remote URL>"
+	where your arguments are the name of the remote repo and a
+	URL address pointing to the repo.
+	
+	C.To actually push the local repo, you use the command
+	"git push <remoteName> <localName>." it pushes the local repo onto the remote repo.
+	the option -u makes push remember the parameters so you just need to type "git push"
+	to push with the previous parameters.
+	
+5. Pulling A Remote Repo.
+	A. Pulling a repo means downloading a remote repo, and checking for any differences
+	between it and your local repo.
+	B. The 'diff' command is used to display the differences between the local and remote
+	repo branches. The 'HEAD' pointer is used to mean the most recent commit. for example,
+	diff is used as "git diff HEAD" to show the difference between the local repo, and the
+	most recent commit of the remote repo.
+	
+	NOTE: Diff can be used to check the differences of staged files before commiting. You
+	do this with the "--staged option"
+	
+6. Removing Staged Files
+	A. Use the command "git reset <filename>" to remove a file from staging.
+	
+	
+	NOTE: using "--" after a command can be used to imply that there are no more options after the "--."
+	
+7. Switching Branches
+	A. you can view all local branches with the command 'git branch' and you can switch between branches
+	using the command 'git checkout <branch>.'
+	
+8. Removing Files From A Branche
+	A. the 'rm' command removes any files from the current branch that are passed as arguments.
+	Example 'git rm *.txt' will remove all .txt files.
+	
+9. Merging
+	A. Merging branches means to make each a copy of each other. The process of merging causes
+	two branches to become identical to each other. It is when you are merging that all differences
+	between both branches are shown, and it must be decided how each difference is to be handled 
+	before merging can be complete; you must decide what code in each branch must be saved, what
+	must be deleted, and what must be overwritten so that both branches are identical, and contain
+	the desired code.
+	
+10. How to find the location for all git config files(system and local)
+	use the commang "git config --list --show-origin'
+	
+11. Cloning A Repo from GitHub onto your local system
+	The command "git clone <repository URL>" will allow one to create a copy
+	of a Git repository onto your local computer. It will create a new folder 
+	in the current directory, and create the cloned repository in the new folder.
+	
+12. 
+	
+
+	
+
+	
+	
